@@ -29,12 +29,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
 
 
-// GET Route for homepage
+// Define a GET Route to serve the index.html page (the homepage)
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-// GET Route for feedback page
+// Define a GET route to serve the notes.html page
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
