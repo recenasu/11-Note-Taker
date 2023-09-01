@@ -1,9 +1,8 @@
 // define variable for fs module for file system interaction.
 const fs = require('fs');
 
-// define variable for how to handle api requests. Currently, there is only one destination ('notes'), so this points directly to the file containing the functions handling those requests.
+// define variable for how to handle api requests. This points to the routes/index.js file containing pointers to the different api router objects (currently, there is only one: "notes").
 const api = require('./routes/index.js');
-
 
 // define variable for importing "express" module for managing server and routes
 const express = require('express');
@@ -13,9 +12,6 @@ const path = require('path');
 
 // define variable for ease of calling on the 'express' server function.
 const app = express();
-
-// Resolve incoming api requests to the api variable
-app.use('/api', api);
 
 // define a variable for the port number the server will communicate on. The first value is the deloyed system environment. If that returns false, the second port number value (3001) for the localhost dev environment will be used.
 const PORT = process.env.PORT || 3001;
@@ -28,6 +24,20 @@ app.use(express.json());
 
 // Mount the 'express.urlencoded' middleware for parsing incoming url encoded data using the qs library, which allows for encoding of arrays.
 app.use(express.urlencoded({ extended: true }));
+
+// Resolve incoming api requests to the api variable
+app.use('/api', api);
+
+
+// GET Route for homepage
+app.get('/', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
+
+// GET Route for feedback page
+app.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
+);
 
 
 // Start the express listen function on the designated PORT. Print a status message to the console.
