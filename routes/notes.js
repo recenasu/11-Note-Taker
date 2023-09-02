@@ -2,7 +2,7 @@
 const notes = require('express').Router();
 
 // define variables for file functions imported from helpers/fsUtils
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
+const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils');
 
 // define variable for importing id generator function from helpers/uuid
 const uuid = require('../helpers/uuid');
@@ -53,25 +53,28 @@ notes.delete('/:id', (req, res) => {
     var currentNotes = [];
     readFromFile('./db/db.json').then((data) => {
         currentNotes = JSON.parse(data);
-    });
+        console.info(currentNotes);
 
-    // For loop to search the array for a match to the requestedID.
-    for (i = 0; i < currentNotes.length; i++) {
-        if (requestedID === currentNotes[i].note_id) {
 
-            // Remove the item from the array
-            currentNotes = currentNotes.splice(i, 1);
+        // For loop to search the array for a match to the requestedID.
+        for (i = 0; i < currentNotes.length; i++) {
+            if (requestedID === currentNotes[i].note_id) {
 
-            // Use the writeToFile helper function to stringify the array and write over the existing db.json file.
-            writeToFile('./db/db.json', currentNotes);
+                // Remove the item from the array
+                currentNotes.splice(i, 1);
+                console.info(currentNotes);
 
-            // Print success messages
-            res.json('Note deleted successfully');
-            console.info('Note deleted successfully');
+                // Use the writeToFile helper function to stringify the array and write over the existing db.json file.
+                writeToFile('./db/db.json', currentNotes);
+
+                // Print success messages
+                res.json('Note deleted successfully');
+                console.info('Note deleted successfully');
+            };
+
         };
-    };
+    });
 });
-
 // Export the 'notes' modular router for use as 'notesRouter' in the '/index.js file.
 module.exports = notes;
 

@@ -1,42 +1,17 @@
 [
     {
-        "title": "Test Title1",
-        "text": "Test text1",
-        "note_id": "ni001"
+        "title": "Van Halen",
+        "text": "Jump",
+        "note_id": "ba91"
     },
     {
-        "title": "Test Title2",
-        "text": "Test text2",
-        "note_id": "ni002"
+        "title": "Pearl Jam",
+        "text": "Black",
+        "note_id": "e044"
     },
     {
-        "title": "Test Title3",
-        "text": "Test text3",
-        "note_id": "ni003"
-    },
-    {
-        "title": "This test",
-        "text": "This is a test",
-        "note_id": "19f4"
-    },
-    {
-        "title": "Another note",
-        "text": "This is another note",
-        "note_id": "332a"
-    },
-    {
-        "title": "This is yet another",
-        "text": "This is yet another note",
-        "note_id": "39b6"
-    },
-    {
-        "title": "This is test note 3",
-        "text": "This is the text for the note",
-        "note_id": "6be3"
-    },
-    {
-        "title": "hhgbfb",
-        "text": "ddfff",
-        "note_id": "807c"
+        "title": "Aerosmith",
+        "text": "What It Takes",
+        "note_id": "7c03"
     }
 ]
