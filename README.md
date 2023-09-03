@@ -41,21 +41,17 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 >    -	THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 >* AC07: *BONUS DELETE NOTE FUNCTION*
->    -  WHEN I click on the trash can icon for a note in the notes list
+>    - WHEN I click on the trash can icon for a note in the notes list
 >    - THEN the note is removed from the list (i.e. the server database file)
 
 ## Installation
 
-> * INSERT HEROKU INFO, open the browser and paste the following URL in the address bar, or click on the link: https://watch.screencastify.com/v/3ld63bqd0t60nh5eCyju
+> * To launch the app, open the browser and paste the following URL in the address bar, or click on the link: https://guarded-beach-42865-be5f35ddba24.herokuapp.com/
 > * To access the project repo, open the browser and paste the following URL in the address bar, or click on the link: https://github.com/recenasu/11-Note-Taker
 
 ## Usage
 
-> * UPDATE STARTING STEP FOR HEROKU From VSCode and VERIFY ALL OF THIS, open a terminal window
-> * Navigate to the project root directory using bash
-> * Type 'npm start'
-> * Press Enter
-> * Open the Google Chrome web browser and navigate to the local host path.
+> * Open the Chrome browser and navigate to the app URL https://guarded-beach-42865-be5f35ddba24.herokuapp.com/
 > * On the Note Taker landing page, click "Get Started" (AC01)
 > * On the Notes page, review the existing notes on the left side of the display (AC02)
 > * Type a new note title and text in the fields provided 
