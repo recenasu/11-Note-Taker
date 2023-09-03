@@ -1,9 +1,11 @@
+// Create variables for the html elements.
 let noteTitle;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+// Assign html elements to variables when on the notes.html page
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -25,6 +27,7 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+// Define GET route for retrieving current note information from the server
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
@@ -33,6 +36,7 @@ const getNotes = () =>
     },
   });
 
+  // Define POST route for saving new notes to the server
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
@@ -42,20 +46,22 @@ const saveNote = (note) =>
     body: JSON.stringify(note),
   });
 
+  // Define DELETE route for removing a specific note from the server
 const deleteNote = (id) =>
-  // fetch(`/api/notes/${id}`, {
-  //   method: 'DELETE',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  // });
-
-  fetch(`/api/notes/9f39`, {
+  fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
   });
+
+  // // ****HANDJAM FETCH FUNCTION FOR DEBUG****
+  // fetch(`/api/notes/9f39`, {
+  //   method: 'DELETE',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  // });
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
