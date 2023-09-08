@@ -67,19 +67,19 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 The following images show the application sequence.
 
 > * Note Taker Landing Page
-![Exhibit 1](./assets/Screen1.png)
+![Exhibit 1](./assets/screen1.png)
 > * Existing Notes Listed 
-![Exhibit 2](./assets/Screen2.png)
+![Exhibit 2](./assets/screen2.png)
 > * New Note Entered
-![Exhibit 3](./assets/Screen3.png)
+![Exhibit 3](./assets/screen3.png)
 > * New Note Saved
-![Exhibit 4](./assets/Screen4.png)
+![Exhibit 4](./assets/screen4.png)
 > * Another Note Selected and Displayed
-![Exhibit 5](./assets/Screen5.png)
+![Exhibit 5](./assets/screen5.png)
 > * Add Note Icon Clicked For New Note Entry
-![Exhibit 6](./assets/Screen6.png)
+![Exhibit 6](./assets/screen6.png)
 > * "Pack for Trip" note Deleted
-![Exhibit 7](./assets/Screen7.png)
+![Exhibit 7](./assets/screen7.png)
 
 
 
